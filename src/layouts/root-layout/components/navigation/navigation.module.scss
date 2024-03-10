@@ -1,0 +1,21 @@
+.header {
+  background-color: transparent;
+  height: fit-content;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  // box-shadow: 0px 0px 1px rgba(30, 40, 52, 0.24), 0px 2px 6px rgba(30, 40, 52, 0.08);
+}
+
+.information {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px 16px;
+  width: fit-content;
+  padding: 4px;
+  margin-left: auto;
+}
