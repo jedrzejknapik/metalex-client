@@ -1,1 +1,1 @@
-export { getCategories, getSubCategory } from "./api";
+export { getCategories, getSubCategories } from "./api";

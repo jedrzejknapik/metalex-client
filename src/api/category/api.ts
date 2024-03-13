@@ -10,7 +10,7 @@ export const getCategories = (): Promise<Category[]> => {
   });
 };
 
-export const getSubCategory = (parentCategory: CategoryTypes) => {
+export const getSubCategories = (parentCategory: CategoryTypes) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(getSubCategoryData(parentCategory));

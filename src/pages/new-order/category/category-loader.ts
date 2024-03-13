@@ -1,6 +1,6 @@
 import type { Params } from "react-router-dom";
 
-import { getSubCategory } from "@api/category";
+import { getSubCategories } from "@api/category";
 
 import { CategoryTypes, SubCategoryData } from "@types";
 
@@ -11,5 +11,5 @@ interface CategoryLoaderParams {
 }
 
 export const categoryLoader = async ({ params }: CategoryLoaderParams) => {
-  return await getSubCategory(params.categoryId as CategoryTypes);
+  return await getSubCategories(params.categoryId as CategoryTypes);
 };

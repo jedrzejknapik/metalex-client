@@ -7,6 +7,13 @@ export interface SubCategory {
   href: string;
 }
 
+export type SubCategoryContent = SubCategory & {
+  parentCategory: {
+    title: string;
+    name: CategoryTypes;
+  };
+};
+
 export interface SubCategoryData {
   title: string;
   parentCaregory: CategoryTypes;

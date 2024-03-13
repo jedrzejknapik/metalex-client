@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { CategoryTypes, SubCategoryData } from "@types";
+import { CategoryTypes, SubCategoryContent, SubCategoryData } from "@types";
 
 export const getSubCategoryData = (
   parentCategory: CategoryTypes
@@ -18,6 +18,33 @@ export const getSubCategoryData = (
   }
 
   return null;
+};
+
+export const getSubCategoryContent = (
+  parentSubCategory: string,
+  parentCategory: CategoryTypes
+): SubCategoryContent | null => {
+  const subCategory = getSubCategoryData(parentCategory);
+
+  if (!subCategory) {
+    return null;
+  }
+
+  const subCategoryData = subCategory.categories.find(({ href }) =>
+    href.includes(parentSubCategory)
+  );
+
+  if (!subCategoryData) {
+    return null;
+  }
+
+  return {
+    ...subCategoryData,
+    parentCategory: {
+      name: subCategory.parentCaregory,
+      title: subCategory.title,
+    },
+  };
 };
 
 export const FOTOWOLTAIKA_MOCKED_SUBCATEGORIES: SubCategoryData = {

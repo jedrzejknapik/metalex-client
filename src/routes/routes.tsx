@@ -8,6 +8,8 @@ import {
   Dashboard,
   Category,
   categoryLoader,
+  SubCategory,
+  subCategoryLoader,
 } from "@pages";
 
 export const ROUTES = {
@@ -34,6 +36,11 @@ export const router = createBrowserRouter([
         path: "new-order/:categoryId",
         element: <Category />,
         loader: categoryLoader,
+      },
+      {
+        path: "new-order/:categoryId/:subCategoryId",
+        element: <SubCategory />,
+        loader: subCategoryLoader,
       },
     ],
   },
