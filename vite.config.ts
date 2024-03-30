@@ -7,6 +7,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
 
   const serverConfig: ServerOptions = {
     port: parseInt(process.env.VITE_PORT || ""),
+    host: process.env.VITE_HOST || "localhost",
   };
 
   return {
