@@ -22,7 +22,7 @@ jobs:
         SSH_ADDRESS: ${{ secrets.IP_ADDRESS }}
       run: |
         run: |
-        sshpass -p "$SSH_PASSWORD" ssh -T -o StrictHostKeyChecking=no $SSH_ADDRESS 'cd /home/ubuntu/metalex/metalex-client && git pull && sudo npm install -g yarn && yarn && yarn global add pm2 && pm2 list'
+        sshpass -p "$SSH_PASSWORD" ssh -T -o StrictHostKeyChecking=no $SSH_ADDRESS 'cd /home/ubuntu/metalex/metalex-client && sudo npm install -g yarn && yarn global add pm2 && git pull && yarn && pm2 list'
         
     - name: Get into frontend app
       run: pwd
