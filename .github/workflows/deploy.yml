@@ -25,4 +25,4 @@ jobs:
         sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_ADDRESS
         
     - name: Get into frontend app
-      run: ls && pwd
+      run: cd /home/ubuntu && pwd && ls
