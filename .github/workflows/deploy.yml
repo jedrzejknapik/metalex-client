@@ -22,7 +22,7 @@ jobs:
         SSH_ADDRESS: ${{ secrets.IP_ADDRESS }}
       run: |
         run: |
-        sshpass -p "$SSH_PASSWORD" ssh $SSH_ADDRESS
+        sshpass -p "$SSH_PASSWORD" ssh -T $SSH_ADDRESS
         
     - name: Get into frontend app
       run: pwd
