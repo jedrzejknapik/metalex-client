@@ -20,7 +20,6 @@ jobs:
       env:
         SSH_PASSWORD: ${{ secrets.PASSWORD }}
         SSH_ADDRESS: ${{ secrets.IP_ADDRESS }}
-        APP_PATH: ${{ secrets.APP_PATH }}
       run: |
         run: |
-        sshpass -p "$SSH_PASSWORD" ssh -T -o StrictHostKeyChecking=no $SSH_ADDRESS 'cd $APP_PATH && sudo npm install -g yarn && yarn global add pm2 && git pull && yarn && /home/linuxbrew/.linuxbrew/bin/pm2 restart 8'
+        sshpass -p "$SSH_PASSWORD" ssh -T -o StrictHostKeyChecking=no $SSH_ADDRESS 'cd /home/ubuntu/metalex/metalex-client && sudo npm install -g yarn && yarn global add pm2 && git pull && yarn && /home/linuxbrew/.linuxbrew/bin/pm2 restart 8'
