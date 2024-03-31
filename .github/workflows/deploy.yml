@@ -1,0 +1,21 @@
+name: SSH Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install sshpass
+      run: sudo apt-get update && sudo apt-get install -y sshpass
+
+    - name: Deploy via SSH
+      run: |
+        sshpass -p '${{ secrets.PASSWORD }}' ssh ${{ secrets.IP_ADDRESS }} 'cd ${{ secrets.APP_PATH }} && git pull'
