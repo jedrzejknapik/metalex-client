@@ -8,6 +8,7 @@ export const Dashboard: FC = () => {
   return (
     <PageLayout title="Dashboard">
       <Typography.Title level={4}>Formularz</Typography.Title>
+      <p>Chuj</p>
       <CustomerForm />
     </PageLayout>
   );
