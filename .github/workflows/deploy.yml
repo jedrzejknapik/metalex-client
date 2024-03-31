@@ -22,4 +22,4 @@ jobs:
         SSH_ADDRESS: ${{ secrets.IP_ADDRESS }}
         APP_PATH: ${{ secrets.APP_PATH }}
       run: |
-        sshpass -p "$SSH_PASSWORD" ssh -vvv $SSH_ADDRESS "pwd"
+        sshpass -p "$SSH_PASSWORD" ssh -vvv $SSH_ADDRESS "cd $APP_PATH && pwd"
