@@ -20,7 +20,11 @@ jobs:
       env:
         SSH_PASSWORD: ${{ secrets.PASSWORD }}
         SSH_ADDRESS: ${{ secrets.IP_ADDRESS }}
-        APP_PATH: ${{ secrets.APP_PATH }}
       run: |
         run: |
-        sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_ADDRESS 'cd ${APP_PATH} && pwd'
+        sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_ADDRESS
+        
+    - name: Get into frontend app
+      env:
+        APP_PATH: ${{ secrets.APP_PATH }}
+      run: cd $APP_PATH && pwd
