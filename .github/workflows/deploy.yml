@@ -17,5 +17,4 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y sshpass
 
     - name: Deploy via SSH
-      run: |
-        sshpass -p '${{ secrets.PASSWORD }}' ssh ${{ secrets.IP_ADDRESS }} 'cd ${{ secrets.APP_PATH }} && git pull'
+      run: sshpass -p ${{ secrets.PASSWORD }} ssh -vvv ${{ secrets.IP_ADDRESS }} 'cd ${{ secrets.APP_PATH }} && git pull'
