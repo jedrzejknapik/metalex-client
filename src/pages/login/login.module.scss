@@ -1,0 +1,20 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  // TODO: Add color relations
+  background-color: whitesmoke;
+  width: 400px;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.button {
+  margin-top: 42px;
+  width: 100%;
+}

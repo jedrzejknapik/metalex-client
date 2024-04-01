@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@hookform/resolvers": "3.3.4",
+    "@types/node": "^20.11.30",
     "antd": "5.15.0",
+    "axios": "^1.6.8",
     "classnames": "2.5.1",
     "framer-motion": "11.0.8",
     "normalize.css": "8.0.1",
