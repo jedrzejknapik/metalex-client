@@ -10,6 +10,7 @@ import {
   categoryLoader,
   SubCategory,
   subCategoryLoader,
+  Login,
 } from "@pages";
 
 export const ROUTES = {
@@ -19,6 +20,7 @@ export const ROUTES = {
 };
 
 export const router = createBrowserRouter([
+  { path: "login", element: <Login /> },
   {
     path: "/",
     element: <RootLayout />,
