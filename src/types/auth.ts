@@ -1,4 +1,9 @@
+export enum LoginFormFields {
+  USERNAME = 'username',
+  PASSWORD = 'password',
+}
+
 export interface LoginPayload {
-  username: string;
-  password: string;
+  [LoginFormFields.USERNAME]: string;
+  [LoginFormFields.PASSWORD]: string;
 }

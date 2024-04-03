@@ -1,0 +1,1 @@
+export { useHandleAppTheme } from './useHandleAppTheme';

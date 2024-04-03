@@ -1,21 +1,19 @@
-import { FC } from "react";
-import { Flex, Layout } from "antd";
+import { FC } from 'react';
 
-import { Notifications, UserInfo } from "./components";
+import { NavigationContainer } from '@components/navigation-container/navigation-container';
 
-import styles from "./navigation.module.scss";
+import { Notifications, UserInfo } from './components';
+import { Flex } from 'antd';
 
-const { Header } = Layout;
+import styles from './navigation.module.scss';
 
 export const Navigation: FC = () => {
   return (
-    <Header className={styles.header}>
-      <div className={styles.container}>
-        <Flex gap="small" align="center" className={styles.information}>
-          <Notifications />
-          <UserInfo />
-        </Flex>
-      </div>
-    </Header>
+    <NavigationContainer>
+      <Flex gap="small" align="center" className={styles.information}>
+        <Notifications />
+        <UserInfo />
+      </Flex>
+    </NavigationContainer>
   );
 };

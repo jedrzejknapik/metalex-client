@@ -28,7 +28,9 @@
       "@routes": ["./src/routes/index.ts"],
       "@types": ["./src/types/index.ts"],
       "@services": ["./src/services/index.ts"],
-      "@guards": ["./src/guards/index.ts"]
+      "@guards": ["./src/guards/index.ts"],
+      "@images/*": ["./src/images/*"],
+      "@providers/*": ["./src/providers/*"]
     }
   },
   "include": ["src"],

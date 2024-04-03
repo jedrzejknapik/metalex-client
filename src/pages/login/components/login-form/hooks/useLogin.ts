@@ -1,6 +1,8 @@
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../../providers/auth/useAuth";
-import { LoginPayload } from "../../../types/auth";
+import { useNavigate } from 'react-router-dom';
+
+import { useAuth } from '@providers/auth/useAuth';
+
+import { LoginPayload } from '@types';
 
 export const useLogin = () => {
   const navigate = useNavigate();
@@ -13,7 +15,7 @@ export const useLogin = () => {
       console.log(response.error);
     } else {
       console.log(response);
-      navigate("/");
+      navigate('/');
     }
   };
 

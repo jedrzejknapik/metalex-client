@@ -1,20 +1,21 @@
 .container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 40px;
 }
 
-.form {
-  // TODO: Add color relations
-  background-color: whitesmoke;
-  width: 400px;
-  padding: 24px;
-  border-radius: 8px;
-}
-
-.button {
-  margin-top: 42px;
+.content {
   width: 100%;
+  display: grid;
+  grid-template-columns: 50% 1px 50%;
+  align-items: center;
+}
+
+.loginForm {
+  width: 100%;
+  padding: 80px;
+  box-sizing: border-box;
+  display: grid;
+  gap: 20px;
 }

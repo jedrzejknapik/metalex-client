@@ -1,15 +1,14 @@
-import axiosModule, { AxiosRequestConfig } from "axios";
-import { getToken } from "../providers/auth/auth.utils";
+import axiosModule, { AxiosRequestConfig } from 'axios';
+import { getToken } from '@providers/auth/auth.utils';
+import { TOKEN_STORAGE_KEY } from '@providers/auth/auth.consts';
 
 const { VITE_API_URL } = import.meta.env;
-
-console.log("api url: ", VITE_API_URL);
 
 const axios = axiosModule.create({
   baseURL: VITE_API_URL,
   headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
   },
 });
 
@@ -27,7 +26,7 @@ axios.interceptors.request.use(
 
     return newConfig;
   },
-  async (error) => Promise.reject(error)
+  async (error) => Promise.reject(error),
 );
 
 axios.interceptors.response.use(
@@ -35,10 +34,10 @@ axios.interceptors.response.use(
   (error) => {
     if (error?.response?.status === 401) {
       // window.location.href = "/login";
-      localStorage.clear();
+      localStorage.removeItem(TOKEN_STORAGE_KEY);
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 const get = async (url: string, config: AxiosRequestConfig = {}) => {
@@ -49,7 +48,7 @@ const get = async (url: string, config: AxiosRequestConfig = {}) => {
 const post = async (
   url: string,
   data: unknown,
-  config: AxiosRequestConfig = {}
+  config: AxiosRequestConfig = {},
 ) => {
   const response = await axios.post(url, data, config);
   return response.data;
@@ -58,7 +57,7 @@ const post = async (
 const put = async <Response>(
   url: string,
   data: unknown,
-  config: AxiosRequestConfig = {}
+  config: AxiosRequestConfig = {},
 ) => {
   const response = await axios.put<Response>(url, data, config);
   return response.data;

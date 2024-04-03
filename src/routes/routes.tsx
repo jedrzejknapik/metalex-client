@@ -1,6 +1,6 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 
-import { RootLayout } from "@layouts";
+import { RootLayout } from '@layouts';
 
 import {
   NewOrder,
@@ -11,36 +11,37 @@ import {
   SubCategory,
   subCategoryLoader,
   Login,
-} from "@pages";
+} from '@pages';
 
 export const ROUTES = {
-  DASHBOARD: () => "/dashboard",
-  NEW_ORDER: () => "/new-order",
+  DASHBOARD: () => '/dashboard',
+  NEW_ORDER: () => '/new-order',
   NEW_CATEGORY: (category: string) => `/new-order/${category}`,
+  FORGOT_PASSWORD: () => '/forgot-password',
 };
 
 export const router = createBrowserRouter([
-  { path: "login", element: <Login /> },
+  { path: 'login', element: <Login /> },
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     children: [
       {
-        path: "dashboard",
+        path: 'dashboard',
         element: <Dashboard />,
       },
       {
-        path: "new-order",
+        path: 'new-order',
         element: <NewOrder />,
         loader: newOrderLoader,
       },
       {
-        path: "new-order/:categoryId",
+        path: 'new-order/:categoryId',
         element: <Category />,
         loader: categoryLoader,
       },
       {
-        path: "new-order/:categoryId/:subCategoryId",
+        path: 'new-order/:categoryId/:subCategoryId',
         element: <SubCategory />,
         loader: subCategoryLoader,
       },
