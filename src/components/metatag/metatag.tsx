@@ -1,11 +1,7 @@
-import { FC } from "react";
-import { Helmet } from "react-helmet";
+import { FC } from 'react';
+import { Helmet, HelmetProps } from 'react-helmet';
 
-interface MetatagProps {
-  title: string;
-}
-
-export const Metatag: FC<MetatagProps> = ({ title }) => {
+export const Metatag: FC<HelmetProps> = ({ title }) => {
   return (
     <Helmet>
       <title>{title}</title>

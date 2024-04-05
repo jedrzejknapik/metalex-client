@@ -1,0 +1,18 @@
+.container {
+  padding: 40px;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 40px;
+}
+
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 1px 50%;
+  align-items: center;
+}

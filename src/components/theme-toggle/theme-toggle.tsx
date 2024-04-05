@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { SunOutlined, MoonOutlined } from '@ant-design/icons';
 
-import { IconButton } from '@components/icon-button/icon-button';
+import { Button } from '@components/button/button';
 
 import { AppTheme } from '@types';
 
@@ -11,7 +11,7 @@ export const ThemeToggle: FC = () => {
   const { theme, onToggleTheme } = useHandleAppTheme();
 
   return (
-    <IconButton
+    <Button
       icon={theme === AppTheme.DARK ? <SunOutlined /> : <MoonOutlined />}
       onClick={onToggleTheme}
     />

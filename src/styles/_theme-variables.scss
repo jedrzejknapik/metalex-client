@@ -10,16 +10,13 @@ $app-theme-color-light: #8a211c !default;
 $app-theme-color-dark: #5d5d5d !default;
 
 /* *** BUTTON COLORS *** */
-$button-color-light: #8a211c !default;
-$button-color-dark: #fff !default;
-$button-border-color-light: #8a211c !default;
-$button-border-color-dark: #8a211c !default;
-$button-background-color-light: #fff !default;
-$button-background-color-dark: #8a211c !default;
-$button-background-color-hover-light: #8a211c !default;
-$button-background-color-hover-dark: #fff !default;
-$button-color-hover-light: #fff !default;
-$button-color-hover-dark: #8a211c !default;
+$button-color: #fff !default;
+$button-color-hover: #8a211c !default;
+$button-border-color: #8a211c !default;
+$button-border-color-hover-light: #8a211c !default;
+$button-border-color-hover-dark: #fff !default;
+$button-background-color: #8a211c !default;
+$button-background-color-hover: #fff !default;
 
 /* *** HEADING COLORS *** */
 $heading-color-light: #8a211c !default;
@@ -32,3 +29,7 @@ $color-primary-light-alt: #5d5d5d !default;
 $color-primary-dark-alt: #939393 !default;
 $color-primary-light-2: #e3e3e3 !default;
 $color-primary-dark-2: #939393 !default;
+
+/* *** TOAST OVERWRITES *** */
+$toast-background-color-light: #fff;
+$toast-background-color-dark: #5d5d5d;

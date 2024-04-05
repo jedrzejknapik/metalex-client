@@ -1,50 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createRoutesFromElements } from 'react-router-dom';
 
-import { RootLayout } from '@layouts';
+import { NON_PROTECTED_ROUTE_ELEMENTS } from './non-protected/route-elements';
+import { PROTECTED_ROUTE_ELEMENTS } from './protected/route-elements';
 
-import {
-  NewOrder,
-  newOrderLoader,
-  Dashboard,
-  Category,
-  categoryLoader,
-  SubCategory,
-  subCategoryLoader,
-  Login,
-} from '@pages';
-
-export const ROUTES = {
-  DASHBOARD: () => '/dashboard',
-  NEW_ORDER: () => '/new-order',
-  NEW_CATEGORY: (category: string) => `/new-order/${category}`,
-  FORGOT_PASSWORD: () => '/forgot-password',
-};
-
-export const router = createBrowserRouter([
-  { path: 'login', element: <Login /> },
-  {
-    path: '/',
-    element: <RootLayout />,
-    children: [
-      {
-        path: 'dashboard',
-        element: <Dashboard />,
-      },
-      {
-        path: 'new-order',
-        element: <NewOrder />,
-        loader: newOrderLoader,
-      },
-      {
-        path: 'new-order/:categoryId',
-        element: <Category />,
-        loader: categoryLoader,
-      },
-      {
-        path: 'new-order/:categoryId/:subCategoryId',
-        element: <SubCategory />,
-        loader: subCategoryLoader,
-      },
-    ],
-  },
-]);
+export const ROUTE_ELEMENTS = createRoutesFromElements(
+  <>
+    {NON_PROTECTED_ROUTE_ELEMENTS}
+    {PROTECTED_ROUTE_ELEMENTS}
+  </>,
+);

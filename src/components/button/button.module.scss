@@ -1,0 +1,15 @@
+.button {
+  width: 100%;
+  border-radius: 6px;
+
+  border-color: var(--button-border-color) !important;
+  box-shadow: none !important;
+  color: var(--button-color) !important;
+  background-color: var(--button-background-color) !important;
+
+  &:hover {
+    border-color: var(--button-border-color-hover) !important;
+    background-color: var(--button-background-color-hover) !important;
+    color: var(--button-color-hover) !important;
+  }
+}
