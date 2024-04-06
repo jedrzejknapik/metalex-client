@@ -22,7 +22,6 @@ export const SignInForm: FC = () => {
       <FormTitle />
       <Form
         onFinish={onSingInUser}
-        className={styles.form}
         form={form}
         layout="vertical"
         labelAlign="left"
