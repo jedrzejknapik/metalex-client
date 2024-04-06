@@ -9,7 +9,7 @@ import { onAuthorization, onSignIn } from '@api/auth';
 
 import { useToken } from '@hooks/useToken';
 
-import { PROTECTED_ROUTES } from '@routes';
+import { NON_PROTECTED_ROUTES, PROTECTED_ROUTES } from '@routes';
 
 export const useHandleAuthorization = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
@@ -53,6 +53,8 @@ export const useHandleAuthorization = () => {
       // Request do wylogowania sesji
       toast.success(LL.SIGN_OFF.RESPONSE.SUCCESS());
       setIsAuthenticated(false);
+
+      navigate(NON_PROTECTED_ROUTES.SIGN_IN());
     } catch (e) {
       toast.error(LL.SIGN_OFF.RESPONSE.FAILED());
     }

@@ -14,13 +14,7 @@ export const ForgotPasswordForm: FC = () => {
   return (
     <div className={styles.container}>
       <FormTitle />
-      <Form
-        onFinish={onSubmit}
-        className={styles.form}
-        form={form}
-        layout="vertical"
-        labelAlign="left"
-      >
+      <Form onFinish={onSubmit} form={form} layout="vertical" labelAlign="left">
         <UsernameInput />
         <SubmitButton />
       </Form>

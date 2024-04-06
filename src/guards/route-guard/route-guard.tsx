@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 
 import { useAuth } from '@providers/auth/hooks';
 
@@ -14,18 +14,33 @@ export const RouteGuard: FC<PropsWithChildren<RouteGuardProps>> = ({
   children,
 }) => {
   const { isAuthenticated } = useAuth();
+  const { pathname } = useLocation();
+
+  const doesProtectedRouteExist = Object.values(PROTECTED_ROUTES).some(
+    (value) => value() === pathname,
+  );
+  const doesNonProtectedRouteExist = Object.values(NON_PROTECTED_ROUTES).some(
+    (value) => value() === pathname,
+  );
 
   if (isProtected) {
-    return isAuthenticated ? (
-      children
-    ) : (
-      <Navigate to={NON_PROTECTED_ROUTES.SIGN_IN()} />
-    );
+    if (!isAuthenticated && doesNonProtectedRouteExist) {
+      return children;
+    }
+    if (isAuthenticated && doesProtectedRouteExist) {
+      return children;
+    }
+
+    return <Navigate to={NON_PROTECTED_ROUTES.NOT_FOUND()} />;
   }
 
-  return isAuthenticated ? (
-    <Navigate to={PROTECTED_ROUTES.DASHBOARD()} />
-  ) : (
-    children
-  );
+  if (isAuthenticated && doesNonProtectedRouteExist) {
+    return <Navigate to={PROTECTED_ROUTES.NOT_FOUND()} />;
+  }
+
+  if (!isAuthenticated && doesProtectedRouteExist) {
+    return <Navigate to={NON_PROTECTED_ROUTES.NOT_FOUND()} />;
+  }
+
+  return children;
 };

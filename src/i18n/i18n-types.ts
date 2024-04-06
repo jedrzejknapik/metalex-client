@@ -64,6 +64,11 @@ type RootTranslation = {
       };
     };
   };
+  NOT_FOUND: {
+    PAGE_TITLE: string;
+    MESSAGE: string;
+    BUTTON_MESSAGE: string;
+  };
   DASHBOARD: {
     PAGE_TITLE: string;
   };
@@ -121,6 +126,11 @@ export type TranslationFunctions = {
         FAILED: () => LocalizedString;
       };
     };
+  };
+  NOT_FOUND: {
+    PAGE_TITLE: () => LocalizedString;
+    MESSAGE: () => LocalizedString;
+    BUTTON_MESSAGE: () => LocalizedString;
   };
   DASHBOARD: {
     PAGE_TITLE: () => LocalizedString;

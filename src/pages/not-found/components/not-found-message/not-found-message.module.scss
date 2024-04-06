@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  padding: 80px;
+  box-sizing: border-box;
+  display: grid;
+  gap: 20px;
+}
+
+.title {
+  color: var(--heading-color) !important;
+  margin: 0 auto;
+}
+
+.button {
+  height: 40px;
+}

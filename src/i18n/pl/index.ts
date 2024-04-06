@@ -50,6 +50,11 @@ const pl: Translations = {
       },
     },
   },
+  NOT_FOUND: {
+    PAGE_TITLE: 'Metalex - Strona nie istnieje',
+    MESSAGE: 'Strona której szukasz nie istnieje',
+    BUTTON_MESSAGE: 'Powrót',
+  },
   DASHBOARD: {
     PAGE_TITLE: 'Metalex - Panel użytkownika',
   },

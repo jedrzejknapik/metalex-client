@@ -6,12 +6,14 @@
   background-color: var(--background-color);
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
   justify-items: center;
   gap: 40px;
 }
 
 .content {
   width: 100%;
+  // height: max-content;
   display: grid;
   grid-template-columns: 50% 1px 50%;
   align-items: center;
