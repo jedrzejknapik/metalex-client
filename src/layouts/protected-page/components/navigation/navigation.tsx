@@ -10,7 +10,7 @@ import styles from './navigation.module.scss';
 
 export const Navigation: FC = () => {
   return (
-    <Header>
+    <Header className={styles.header}>
       <Flex gap="small" align="center" className={styles.information}>
         <ThemeToggle />
         <Notifications />

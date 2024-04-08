@@ -22,6 +22,9 @@
   --button-background-color-hover: #{$button-background-color-hover};
   --button-color-hover: #{$button-color-hover};
 
+  // ANIMATIONS
+  --animation-type: #{$animation-type};
+
   //TOAST OVERWRITES
   --toastify-toast-min-height: 40px;
 
@@ -47,6 +50,7 @@
 .light {
   // BACKGROUND COLOR
   --background-color: #{$background-color-light};
+  --background-color-alt: #{$background-color-alt-light};
 
   // COLOR PRIMARY
   --color-primary: #{$color-primary-light};
@@ -70,6 +74,7 @@
 .dark {
   // BACKGROUND COLOR
   --background-color: #{$background-color-dark};
+  --background-color-alt: #{$background-color-alt-dark};
 
   // COLOR PRIMARY
   --color-primary: #{$color-primary-dark};

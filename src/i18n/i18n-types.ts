@@ -71,9 +71,15 @@ type RootTranslation = {
   };
   DASHBOARD: {
     PAGE_TITLE: string;
+    HEADING: string;
   };
   USER_PROFILE: {
     PAGE_TITLE: string;
+    HEADING: string;
+  };
+  MENU_LIST: {
+    PROFILE: string;
+    DASHBOARD: string;
   };
 };
 
@@ -134,9 +140,15 @@ export type TranslationFunctions = {
   };
   DASHBOARD: {
     PAGE_TITLE: () => LocalizedString;
+    HEADING: () => LocalizedString;
   };
   USER_PROFILE: {
     PAGE_TITLE: () => LocalizedString;
+    HEADING: () => LocalizedString;
+  };
+  MENU_LIST: {
+    PROFILE: () => LocalizedString;
+    DASHBOARD: () => LocalizedString;
   };
 };
 

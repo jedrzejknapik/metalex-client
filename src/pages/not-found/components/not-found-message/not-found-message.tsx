@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useI18nContext } from '@i18n/i18n-react';
-import { Typography } from 'antd';
 
+import Typography from '@components/typography';
 import { Button } from '@components/button/button';
 
 import { useAuth } from '@providers/auth/hooks';

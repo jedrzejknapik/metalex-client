@@ -57,9 +57,15 @@ const pl: Translations = {
   },
   DASHBOARD: {
     PAGE_TITLE: 'Metalex - Panel użytkownika',
+    HEADING: 'Panel użytkownika',
   },
   USER_PROFILE: {
     PAGE_TITLE: 'Metalex - Profil użytkownika',
+    HEADING: 'Profil użytkownika',
+  },
+  MENU_LIST: {
+    PROFILE: 'Profil',
+    DASHBOARD: 'Panel użytkownika',
   },
 } satisfies BaseTranslation;
 

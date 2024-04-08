@@ -1,15 +1,21 @@
 import { FC } from 'react';
 import { useI18nContext } from '@i18n/i18n-react';
 
-import { Metatag } from '@components/metatag/metatag';
+import { PageContent } from '@layouts/page-content/page-content';
+
+import styles from './user-profile.module.scss';
 
 export const UserProfile: FC = () => {
   const { LL } = useI18nContext();
 
   return (
     <>
-      <Metatag title={LL.USER_PROFILE.PAGE_TITLE()} />
-      <p>User Profile</p>
+      <PageContent
+        heading={LL.USER_PROFILE.HEADING()}
+        metaTitle={LL.USER_PROFILE.PAGE_TITLE()}
+      >
+        <div className={styles.testCard}></div>
+      </PageContent>
     </>
   );
 };

@@ -4,6 +4,8 @@ $font-family-inter: 'Inter', sans-serif;
 /* *** BACKGROUND COLOR *** */
 $background-color-light: #fff !default;
 $background-color-dark: #121212 !default;
+$background-color-alt-light: #f5f5f5 !default;
+$background-color-alt-dark: #121212 !default;
 
 /* *** APP THEME *** */
 $app-theme-color-light: #8a211c !default;
@@ -17,6 +19,9 @@ $button-border-color-hover-light: #8a211c !default;
 $button-border-color-hover-dark: #fff !default;
 $button-background-color: #8a211c !default;
 $button-background-color-hover: #fff !default;
+
+/* *** ANIMATIONS *** */
+$animation-type: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 /* *** HEADING COLORS *** */
 $heading-color-light: #8a211c !default;

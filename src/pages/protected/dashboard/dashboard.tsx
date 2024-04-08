@@ -1,15 +1,21 @@
 import { FC } from 'react';
 import { useI18nContext } from '@i18n/i18n-react';
 
-import { Metatag } from '@components/metatag/metatag';
+import { PageContent } from '@layouts/page-content/page-content';
+
+import styles from './dashboard.module.scss';
 
 export const Dashboard: FC = () => {
   const { LL } = useI18nContext();
 
   return (
     <>
-      <Metatag title={LL.DASHBOARD.PAGE_TITLE()} />
-      <p>Dashboard</p>
+      <PageContent
+        heading={LL.DASHBOARD.HEADING()}
+        metaTitle={LL.DASHBOARD.PAGE_TITLE()}
+      >
+        <div className={styles.testCard}></div>
+      </PageContent>
     </>
   );
 };

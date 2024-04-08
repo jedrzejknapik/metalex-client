@@ -1,18 +1,24 @@
 import { FC, PropsWithChildren } from 'react';
+import { Layout } from 'antd';
 
 import { PageLoader } from '@components/page-loader/page-loader';
 
-import { Navigation } from './components';
+import { Navigation, SideBar } from './components';
+
+import { SideBarStateProvider } from './providers/side-bar-state/side-bar-state-provider';
 
 import styles from './protected-page.module.scss';
 
 export const ProtectedPage: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
-      <div className={styles.container}>
+      <Layout className={styles.container}>
+        <SideBarStateProvider>
+          <SideBar />
+        </SideBarStateProvider>
         <Navigation />
-        <div className={styles.content}>{children}</div>
-      </div>
+        {children}
+      </Layout>
       <PageLoader />
     </>
   );

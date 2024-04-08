@@ -1,6 +1,8 @@
 .button {
   width: 100%;
   border-radius: 6px;
+  min-height: 40px;
+  min-width: 40px;
 
   border-color: var(--button-border-color) !important;
   box-shadow: none !important;

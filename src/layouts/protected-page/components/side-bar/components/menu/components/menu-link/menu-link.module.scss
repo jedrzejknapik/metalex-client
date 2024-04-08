@@ -1,0 +1,38 @@
+.link {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  gap: 8px;
+  color: var(--app-theme-color);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition:
+    background-color 0.2s var(--animation-type),
+    border-color 0.2s var(--animation-type);
+
+  &:hover:not(.isActive) {
+    color: var(--app-theme-color);
+    border-color: var(--app-theme-color);
+  }
+}
+
+.link:not(.onlyLogo) {
+  padding-left: 14px;
+}
+
+.onlyLogo {
+  justify-content: center;
+  margin: 0 auto;
+  width: 40px;
+}
+
+.isActive {
+  background-color: var(--app-theme-color);
+  color: var(--color-primary-2);
+
+  &:hover {
+    color: var(--app-theme-color);
+    background-color: var(--background-color);
+    border-color: var(--app-theme-color);
+  }
+}
