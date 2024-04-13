@@ -12,13 +12,9 @@ import styles from './profile-option.module.scss';
 
 export const ProfileOption: FC<Profile> = ({ id, imageRef, name }) => {
   return (
-    <FormRadio
-      value={id}
-      name={CreateOrderFormFields.PROFILE_ID}
-      className={styles.container}
-    >
-      <Card className={styles.card} classNames={{ body: styles.body }}>
-        <Image src={imageRef} preview={false} className={styles.image} />
+    <FormRadio value={id} name={CreateOrderFormFields.PROFILE_ID}>
+      <Card classNames={{ body: styles.body }}>
+        <Image src={imageRef} preview={false} />
         <Typography.Text className={styles.text}>{name}</Typography.Text>
       </Card>
     </FormRadio>
