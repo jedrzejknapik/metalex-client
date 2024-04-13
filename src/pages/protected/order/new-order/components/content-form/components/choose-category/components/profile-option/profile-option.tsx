@@ -14,7 +14,12 @@ export const ProfileOption: FC<Profile> = ({ id, imageRef, name }) => {
   return (
     <FormRadio value={id} name={CreateOrderFormFields.PROFILE_ID}>
       <Card classNames={{ body: styles.body }}>
-        <Image src={imageRef} preview={false} />
+        <Image
+          src={imageRef}
+          preview={false}
+          wrapperClassName={styles.image}
+          className={styles.content}
+        />
         <Typography.Text className={styles.text}>{name}</Typography.Text>
       </Card>
     </FormRadio>
