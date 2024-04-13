@@ -1,13 +1,31 @@
-import { useContext } from 'react';
+import { useState } from 'react';
 
-import { SideBarStateContext } from '../side-bar-state-context';
+const TOOLBAR_KEY = 'toolbar';
+
+const getSavedToolbarConfiguration = (): boolean => {
+  const toolbar = localStorage.getItem(TOOLBAR_KEY);
+
+  return toolbar === 'true';
+};
+
+const setNewToolbarConfiguration = (newValue: boolean) => {
+  localStorage.setItem(TOOLBAR_KEY, `${newValue}`);
+};
 
 export const useSideBarState = () => {
-  const sideBarState = useContext(SideBarStateContext);
+  const [collapsed, setCollapsed] = useState(getSavedToolbarConfiguration());
 
-  if (!sideBarState) {
-    throw new Error('useSideBarState must be used within SideBarStateContext');
-  }
+  const onToggleToolBar = () => {
+    setCollapsed((prevState) => {
+      const newValue = !prevState;
 
-  return sideBarState;
+      setNewToolbarConfiguration(newValue);
+      return newValue;
+    });
+  };
+
+  return {
+    collapsed,
+    onToggleToolBar,
+  };
 };

@@ -14,6 +14,7 @@ import { NON_PROTECTED_ROUTES, PROTECTED_ROUTES } from '@routes';
 export const useHandleAuthorization = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
   const [userSession, setUserSession] = useState<UserSession | null>(null);
+  const [isSignInFormSubmitted, setIsSignInFormSubmitted] = useState(false);
   const { setToken, removeToken, token } = useToken();
   const { LL } = useI18nContext();
   const navigate = useNavigate();
@@ -35,15 +36,18 @@ export const useHandleAuthorization = () => {
 
   const onSingInUser = async (payload: SignInPayload) => {
     try {
+      setIsSignInFormSubmitted(true);
       const token = await onSignIn(payload);
       setToken(token);
       toast.success(LL.SIGN_IN.FORM.RESPONSE.SUCCESS());
       setIsAuthenticated(true);
 
       navigate(PROTECTED_ROUTES.DASHBOARD());
+      setIsSignInFormSubmitted(false);
     } catch (e) {
       toast.error(LL.SIGN_IN.FORM.RESPONSE.FAILED());
       setIsAuthenticated(false);
+      setIsSignInFormSubmitted(false);
     }
   };
 
@@ -65,5 +69,6 @@ export const useHandleAuthorization = () => {
     isAuthenticated,
     onSingInUser,
     onSignOutUser,
+    isSignInFormSubmitted,
   };
 };

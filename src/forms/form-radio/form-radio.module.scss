@@ -1,0 +1,14 @@
+.button {
+  --radio-border-color: transparent;
+
+  height: fit-content;
+  width: fit-content;
+  padding: 0;
+  border: unset !important;
+  background-color: transparent !important;
+  border-radius: 6px !important;
+
+  &::before {
+    width: 0 !important;
+  }
+}

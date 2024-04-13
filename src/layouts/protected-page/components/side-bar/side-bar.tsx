@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import { Layout } from 'antd';
 
-import { CollapseButton, Menu } from './components';
+import { useSideBar } from '@layouts/protected-page/providers';
 
-import { useSideBarState } from '@layouts/protected-page/providers';
+import { CollapseButton, Menu } from './components';
 
 import styles from './side-bar.module.scss';
 
 export const SideBar: FC = () => {
-  const { collapsed } = useSideBarState();
+  const { collapsed } = useSideBar();
 
   return (
     <Layout.Sider

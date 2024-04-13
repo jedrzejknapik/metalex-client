@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  display: block;
+  width: 25px;
+  height: 25px;
+}

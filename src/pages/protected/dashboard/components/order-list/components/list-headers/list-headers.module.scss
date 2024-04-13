@@ -1,0 +1,14 @@
+.container {
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.container li:last-child {
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bold;
+}

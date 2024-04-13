@@ -5,8 +5,13 @@ import { AuthContext, AuthContextProps } from './auth-context';
 import { useHandleAuthorization } from './hooks';
 
 export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { userSession, isAuthenticated, onSingInUser, onSignOutUser } =
-    useHandleAuthorization();
+  const {
+    userSession,
+    isAuthenticated,
+    onSingInUser,
+    onSignOutUser,
+    isSignInFormSubmitted,
+  } = useHandleAuthorization();
 
   if (isAuthenticated === null) {
     return <p>Loading</p>;
@@ -17,6 +22,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
     isAuthenticated,
     onSingInUser,
     onSignOutUser,
+    isSignInFormSubmitted,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

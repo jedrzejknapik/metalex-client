@@ -7,6 +7,7 @@ export interface AuthContextProps {
   isAuthenticated: boolean;
   onSingInUser: (payload: SignInPayload) => Promise<void>;
   onSignOutUser: () => Promise<void>;
+  isSignInFormSubmitted: boolean;
 }
 
 export const AuthContext = createContext<AuthContextProps | undefined>(

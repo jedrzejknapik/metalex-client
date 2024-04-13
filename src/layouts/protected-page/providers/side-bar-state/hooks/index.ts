@@ -1,2 +1,2 @@
-export { useSideBar } from './useSideBar';
 export { useSideBarState } from './useSideBarState';
+export { useSideBar } from './useSideBar';

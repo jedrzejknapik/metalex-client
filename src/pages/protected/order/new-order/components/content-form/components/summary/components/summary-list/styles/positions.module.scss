@@ -1,0 +1,7 @@
+.container {
+  padding: 12px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  border-top: 1px solid var(--app-theme-color);
+}

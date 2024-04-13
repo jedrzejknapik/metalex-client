@@ -1,0 +1,1 @@
+export { useGetColorList } from './query';

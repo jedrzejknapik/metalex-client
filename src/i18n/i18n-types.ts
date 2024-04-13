@@ -3,6 +3,7 @@
 import type {
   BaseTranslation as BaseTranslationType,
   LocalizedString,
+  RequiredParams,
 } from 'typesafe-i18n';
 
 export type BaseTranslation = BaseTranslationType;
@@ -81,6 +82,203 @@ type RootTranslation = {
     PROFILE: string;
     DASHBOARD: string;
   };
+  ORDER_LIST: {
+    HEADING: string;
+    CREATE_ORDER: string;
+    HEADERS: {
+      ORDER_NR: string;
+      CREATED: string;
+      CUSTOMER: string;
+      STATUS: string;
+      PRICE: string;
+      OPTIONS: string;
+    };
+  };
+  STATUSES: {
+    FULFILLED: string;
+    UNFULFILLED: string;
+    PENDING: string;
+  };
+  ORDER: {
+    NEW_ORDER: {
+      PAGE_TITLE: string;
+      HEADING: string;
+      STEPS: {
+        CHOOSE_PROFILE: string;
+        FILL_THE_FORM: string;
+        SUMMARY: string;
+      };
+      CHOOSE_PROFILE: {
+        NEXT: string;
+      };
+      FILL_THE_FORM: {
+        NEXT: string;
+        PREVIOUS: string;
+        FIELDS: {
+          ORDER_NR: {
+            LABEL: string;
+            VALIDATION: {
+              REQUIRED: string;
+            };
+          };
+          DATE: {
+            LABEL: string;
+            VALIDATION: {
+              REQUIRED: string;
+            };
+          };
+          CUSTOMER: {
+            LABEL: string;
+            VALIDATION: {
+              REQUIRED: string;
+            };
+          };
+          POSITIONS: {
+            HEADING: string;
+            FIELDS: {
+              THICKNESS: {
+                LABEL: string;
+                VALIDATION: {
+                  REQUIRED: string;
+                };
+              };
+              WIDTH: {
+                LABEL: string;
+                VALIDATION: {
+                  REQUIRED: string;
+                };
+              };
+              COLOR: {
+                LABEL: string;
+                VALIDATION: {
+                  REQUIRED: string;
+                };
+              };
+              MATERIAL: {
+                LABEL: string;
+                VALIDATION: {
+                  REQUIRED: string;
+                };
+              };
+              ROLL: {
+                LABEL: string;
+                VALIDATION: {
+                  REQUIRED: string;
+                };
+              };
+              GLOSSY: {
+                LABEL: string;
+              };
+              DOUBLE_SIDED: {
+                LABEL: string;
+              };
+              FIRST_CLASS: {
+                LABEL: string;
+              };
+              SHEETS: {
+                HEADING: string;
+                FIELDS: {
+                  QUANTITY: {
+                    LABEL: string;
+                    VALIDATION: {
+                      REQUIRED: string;
+                    };
+                    ADDON_AFTER_MESSAGE: string;
+                  };
+                  METERS: {
+                    LABEL: string;
+                    VALIDATION: {
+                      REQUIRED: string;
+                    };
+                    ADDON_AFTER_MESSAGE: string;
+                  };
+                  IS_FOILED: {
+                    LABEL: string;
+                  };
+                };
+              };
+            };
+          };
+        };
+      };
+      SUMMARY: {
+        HEADING: string;
+        SUBMIT: string;
+        PREVIOUS: string;
+        COMMON_INFORMATION: string;
+        FIELDS: {
+          CUSTOMER: {
+            LABEL: string;
+          };
+          ORDER_NR: {
+            LABEL: string;
+          };
+          PROFILE: {
+            LABEL: string;
+          };
+          DATE: {
+            LABEL: string;
+          };
+          POSITIONS: {
+            LABEL: string;
+            POSITION_NUMBER: RequiredParams<'positionNr'>;
+            FIELDS: {
+              COLOR: {
+                LABEL: string;
+              };
+              DOUBLE_SIDED: {
+                LABEL: string;
+              };
+              FIRST_CLASS: {
+                LABEL: string;
+              };
+              GLOSSY: {
+                LABEL: string;
+              };
+              MATERIAL: {
+                LABEL: string;
+              };
+              ROLL: {
+                LABEL: string;
+              };
+              THICKNESS: {
+                LABEL: string;
+              };
+              WIDTH: {
+                LABEL: string;
+              };
+              SHEETS: {
+                LABEL: string;
+                FIELDS: {
+                  FOILED: {
+                    LABEL: string;
+                  };
+                  METERS: {
+                    LABEL: string;
+                  };
+                  QUANTITY: {
+                    LABEL: string;
+                  };
+                };
+              };
+            };
+          };
+        };
+        RESPONSE: {
+          SUCCESS: string;
+          FAILED: string;
+        };
+      };
+    };
+    VIEW_ORDER: {
+      PAGE_TITLE: RequiredParams<'orderNr'>;
+      HEADING: RequiredParams<'orderNr'>;
+    };
+  };
+  COMMONS: {
+    YES: string;
+    NO: string;
+  };
 };
 
 export type TranslationFunctions = {
@@ -149,6 +347,203 @@ export type TranslationFunctions = {
   MENU_LIST: {
     PROFILE: () => LocalizedString;
     DASHBOARD: () => LocalizedString;
+  };
+  ORDER_LIST: {
+    HEADING: () => LocalizedString;
+    CREATE_ORDER: () => LocalizedString;
+    HEADERS: {
+      ORDER_NR: () => LocalizedString;
+      CREATED: () => LocalizedString;
+      CUSTOMER: () => LocalizedString;
+      STATUS: () => LocalizedString;
+      PRICE: () => LocalizedString;
+      OPTIONS: () => LocalizedString;
+    };
+  };
+  STATUSES: {
+    FULFILLED: () => LocalizedString;
+    UNFULFILLED: () => LocalizedString;
+    PENDING: () => LocalizedString;
+  };
+  ORDER: {
+    NEW_ORDER: {
+      PAGE_TITLE: () => LocalizedString;
+      HEADING: () => LocalizedString;
+      STEPS: {
+        CHOOSE_PROFILE: () => LocalizedString;
+        FILL_THE_FORM: () => LocalizedString;
+        SUMMARY: () => LocalizedString;
+      };
+      CHOOSE_PROFILE: {
+        NEXT: () => LocalizedString;
+      };
+      FILL_THE_FORM: {
+        NEXT: () => LocalizedString;
+        PREVIOUS: () => LocalizedString;
+        FIELDS: {
+          ORDER_NR: {
+            LABEL: () => LocalizedString;
+            VALIDATION: {
+              REQUIRED: () => LocalizedString;
+            };
+          };
+          DATE: {
+            LABEL: () => LocalizedString;
+            VALIDATION: {
+              REQUIRED: () => LocalizedString;
+            };
+          };
+          CUSTOMER: {
+            LABEL: () => LocalizedString;
+            VALIDATION: {
+              REQUIRED: () => LocalizedString;
+            };
+          };
+          POSITIONS: {
+            HEADING: () => LocalizedString;
+            FIELDS: {
+              THICKNESS: {
+                LABEL: () => LocalizedString;
+                VALIDATION: {
+                  REQUIRED: () => LocalizedString;
+                };
+              };
+              WIDTH: {
+                LABEL: () => LocalizedString;
+                VALIDATION: {
+                  REQUIRED: () => LocalizedString;
+                };
+              };
+              COLOR: {
+                LABEL: () => LocalizedString;
+                VALIDATION: {
+                  REQUIRED: () => LocalizedString;
+                };
+              };
+              MATERIAL: {
+                LABEL: () => LocalizedString;
+                VALIDATION: {
+                  REQUIRED: () => LocalizedString;
+                };
+              };
+              ROLL: {
+                LABEL: () => LocalizedString;
+                VALIDATION: {
+                  REQUIRED: () => LocalizedString;
+                };
+              };
+              GLOSSY: {
+                LABEL: () => LocalizedString;
+              };
+              DOUBLE_SIDED: {
+                LABEL: () => LocalizedString;
+              };
+              FIRST_CLASS: {
+                LABEL: () => LocalizedString;
+              };
+              SHEETS: {
+                HEADING: () => LocalizedString;
+                FIELDS: {
+                  QUANTITY: {
+                    LABEL: () => LocalizedString;
+                    VALIDATION: {
+                      REQUIRED: () => LocalizedString;
+                    };
+                    ADDON_AFTER_MESSAGE: () => LocalizedString;
+                  };
+                  METERS: {
+                    LABEL: () => LocalizedString;
+                    VALIDATION: {
+                      REQUIRED: () => LocalizedString;
+                    };
+                    ADDON_AFTER_MESSAGE: () => LocalizedString;
+                  };
+                  IS_FOILED: {
+                    LABEL: () => LocalizedString;
+                  };
+                };
+              };
+            };
+          };
+        };
+      };
+      SUMMARY: {
+        HEADING: () => LocalizedString;
+        SUBMIT: () => LocalizedString;
+        PREVIOUS: () => LocalizedString;
+        COMMON_INFORMATION: () => LocalizedString;
+        FIELDS: {
+          CUSTOMER: {
+            LABEL: () => LocalizedString;
+          };
+          ORDER_NR: {
+            LABEL: () => LocalizedString;
+          };
+          PROFILE: {
+            LABEL: () => LocalizedString;
+          };
+          DATE: {
+            LABEL: () => LocalizedString;
+          };
+          POSITIONS: {
+            LABEL: () => LocalizedString;
+            POSITION_NUMBER: (arg: { positionNr: number }) => LocalizedString;
+            FIELDS: {
+              COLOR: {
+                LABEL: () => LocalizedString;
+              };
+              DOUBLE_SIDED: {
+                LABEL: () => LocalizedString;
+              };
+              FIRST_CLASS: {
+                LABEL: () => LocalizedString;
+              };
+              GLOSSY: {
+                LABEL: () => LocalizedString;
+              };
+              MATERIAL: {
+                LABEL: () => LocalizedString;
+              };
+              ROLL: {
+                LABEL: () => LocalizedString;
+              };
+              THICKNESS: {
+                LABEL: () => LocalizedString;
+              };
+              WIDTH: {
+                LABEL: () => LocalizedString;
+              };
+              SHEETS: {
+                LABEL: () => LocalizedString;
+                FIELDS: {
+                  FOILED: {
+                    LABEL: () => LocalizedString;
+                  };
+                  METERS: {
+                    LABEL: () => LocalizedString;
+                  };
+                  QUANTITY: {
+                    LABEL: () => LocalizedString;
+                  };
+                };
+              };
+            };
+          };
+        };
+        RESPONSE: {
+          SUCCESS: () => LocalizedString;
+          FAILED: () => LocalizedString;
+        };
+      };
+    };
+    VIEW_ORDER: {
+      PAGE_TITLE: (arg: { orderNr: string }) => LocalizedString;
+      HEADING: (arg: { orderNr: string }) => LocalizedString;
+    };
+  };
+  COMMONS: {
+    YES: () => LocalizedString;
+    NO: () => LocalizedString;
   };
 };
 

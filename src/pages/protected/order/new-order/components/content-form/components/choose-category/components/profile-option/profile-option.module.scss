@@ -1,0 +1,14 @@
+.text {
+  // display: flex;
+  // justify-content: center;
+  color: var(--color-primary) !important;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.body {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

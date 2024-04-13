@@ -1,0 +1,12 @@
+.card {
+  border-color: var(--radio-border-color);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--app-theme-color);
+  }
+}
+
+.body {
+  padding: 16px !important;
+}

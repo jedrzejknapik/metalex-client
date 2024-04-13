@@ -2,14 +2,14 @@ import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import cn from 'classnames';
 
-import { useSideBarState } from '@layouts/protected-page/providers';
+import { useSideBar } from '@layouts/protected-page/providers';
 
 import { MenuOption } from '@types';
 
 import styles from './menu-link.module.scss';
 
 export const MenuLink: FC<MenuOption> = ({ href, icon, text }) => {
-  const { collapsed } = useSideBarState();
+  const { collapsed } = useSideBar();
 
   return (
     <NavLink

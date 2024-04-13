@@ -1,0 +1,25 @@
+.container {
+  padding: 24px 0 24px 24px;
+  border-top: 1px solid var(--app-theme-color);
+}
+
+.firstRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 40px;
+  gap: 24px;
+}
+
+.switches {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.firstColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondRow {
+  display: grid;
+  padding-right: 24px;
+}

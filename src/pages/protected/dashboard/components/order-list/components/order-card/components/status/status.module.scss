@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  background-color: transparent;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #fff !important;
+
+  &.fulfilled {
+    background-color: var(--status-fulfilled);
+  }
+
+  &.unfulfilled {
+    background-color: var(--status-unfulfilled);
+  }
+
+  &.pending {
+    background-color: var(--status-pending);
+  }
+}

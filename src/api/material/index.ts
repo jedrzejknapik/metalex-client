@@ -1,0 +1,1 @@
+export { useGetMaterialList } from './query';

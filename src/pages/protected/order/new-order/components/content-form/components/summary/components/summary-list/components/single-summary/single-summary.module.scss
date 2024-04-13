@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+}
+
+.value {
+  font-weight: bold;
+}

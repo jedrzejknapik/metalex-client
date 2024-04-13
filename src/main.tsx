@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from '@providers/auth/auth-provider.tsx';
 import { ToastProvider } from '@providers/toasts/toasts-provider.tsx';
 import { LangProvider } from '@providers/lang/lang-provider.tsx';
+import { ReactQueryProvider } from '@providers/react-query/react-query-provider.tsx';
 
 import { App } from './App.tsx';
 
@@ -14,14 +15,16 @@ import './styles/_theme.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <LangProvider>
-        <ToastProvider>
-          <AuthProvider>
-            <App />
-          </AuthProvider>
-        </ToastProvider>
-      </LangProvider>
-    </BrowserRouter>
+    <ReactQueryProvider>
+      <BrowserRouter>
+        <LangProvider>
+          <ToastProvider>
+            <AuthProvider>
+              <App />
+            </AuthProvider>
+          </ToastProvider>
+        </LangProvider>
+      </BrowserRouter>
+    </ReactQueryProvider>
   </React.StrictMode>,
 );

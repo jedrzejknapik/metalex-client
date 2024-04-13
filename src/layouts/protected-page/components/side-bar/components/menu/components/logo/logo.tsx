@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
-import { useSideBarState } from '@layouts/protected-page/providers';
+import { useSideBar } from '@layouts/protected-page/providers';
 
 import styles from './logo.module.scss';
 
 export const Logo: FC = () => {
-  const { collapsed } = useSideBarState();
+  const { collapsed } = useSideBar();
 
   return (
     <div className={styles.container}>

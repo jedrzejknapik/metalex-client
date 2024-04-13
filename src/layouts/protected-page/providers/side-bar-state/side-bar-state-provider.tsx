@@ -5,10 +5,10 @@ import {
   SideBarStateContextProps,
 } from './side-bar-state-context';
 
-import { useSideBar } from './hooks';
+import { useSideBarState } from './hooks';
 
 export const SideBarStateProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { collapsed, onToggleToolBar } = useSideBar();
+  const { collapsed, onToggleToolBar } = useSideBarState();
 
   const value: SideBarStateContextProps = {
     collapsed,

@@ -1,0 +1,1 @@
+export { useGetCustomerList } from './query';

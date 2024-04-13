@@ -1,0 +1,9 @@
+.input {
+  border-color: var(--app-theme-color);
+
+  &:focus,
+  &:hover,
+  &:focus-within {
+    border-color: var(--app-theme-color);
+  }
+}

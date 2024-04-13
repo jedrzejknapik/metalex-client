@@ -35,7 +35,9 @@
       "@hooks/*": ["./src/hooks/*"],
       "@i18n/*": ["./src/i18n/*"],
       "@forms": ["./src/forms/index.ts"],
-      "@utils/*": ["./src/utils/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@animations/*": ["./src/animations/*"],
+      "@icons/*": ["./src/icons/*"]
     }
   },
   "include": ["src"],

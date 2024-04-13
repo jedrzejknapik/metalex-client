@@ -1,0 +1,11 @@
+.picker {
+  padding: 6px 12px;
+  width: 100%;
+  border-color: var(--app-theme-color);
+
+  &:focus,
+  &:hover,
+  &:focus-within {
+    border-color: var(--app-theme-color);
+  }
+}

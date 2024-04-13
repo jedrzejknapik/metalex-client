@@ -1,0 +1,12 @@
+.body {
+  padding: 12px !important;
+}
+
+.card {
+  border-color: transparent;
+
+  &:hover {
+    cursor: default;
+    border-color: transparent;
+  }
+}
