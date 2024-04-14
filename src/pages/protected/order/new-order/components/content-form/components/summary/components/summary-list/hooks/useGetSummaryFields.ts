@@ -4,6 +4,8 @@ import {
   useGetCustomer,
   useGetDate,
   useGetOrderNr,
+  useGetPrice,
+  useGetProductQuantity,
   useGetProfile,
 } from './general-fields';
 
@@ -34,6 +36,18 @@ export const useGetSummaryFields = () => {
 
   if (date) {
     fields.push(date);
+  }
+
+  const price = useGetPrice();
+
+  if (price) {
+    fields.push(price);
+  }
+
+  const productQuantity = useGetProductQuantity();
+
+  if (productQuantity) {
+    fields.push(productQuantity);
   }
 
   const positions = useGetPositions();

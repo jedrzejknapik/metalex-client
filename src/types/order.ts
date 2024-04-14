@@ -9,7 +9,7 @@ export enum OrderStatus {
 export interface Order {
   id: string;
   orderNr: string;
-  createdAt: string;
+  createdAt: Date;
   customer: Customer;
   status: OrderStatus;
   price: string;
@@ -57,14 +57,18 @@ export interface Position {
 export enum CreateOrderFormFields {
   PROFILE_ID = 'profileId',
   ORDER_NR = 'orderNr',
-  DATE = 'date',
+  CREATED_AT = 'createdAt',
   CUSTOMER_ID = 'customerId',
   POSITIONS = 'positions',
+  PRICE = 'price',
+  PRODUCTS_QUANTITY = 'productQuantity',
 }
 
 export interface CreateOrderPayload {
   [CreateOrderFormFields.ORDER_NR]: Order['orderNr'];
-  [CreateOrderFormFields.DATE]: Order['createdAt'];
+  [CreateOrderFormFields.CREATED_AT]: Order['createdAt'];
   [CreateOrderFormFields.CUSTOMER_ID]: Customer['id'];
   [CreateOrderFormFields.POSITIONS]: Position[];
+  [CreateOrderFormFields.PRICE]: Order['price'];
+  [CreateOrderFormFields.PRODUCTS_QUANTITY]: Order['productQuantity'];
 }

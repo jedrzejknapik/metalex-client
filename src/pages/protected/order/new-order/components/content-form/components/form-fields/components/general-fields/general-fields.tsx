@@ -1,6 +1,12 @@
 import { FC } from 'react';
 
-import { CustomerSelect, DatePicker, OrderNrInput } from './components';
+import {
+  CustomerSelect,
+  DatePicker,
+  OrderNrInput,
+  PriceInput,
+  ProductQuantityInput,
+} from './components';
 
 import styles from './general-fields.module.scss';
 
@@ -10,6 +16,8 @@ export const GeneralFields: FC = () => {
       <OrderNrInput />
       <DatePicker />
       <CustomerSelect />
+      <ProductQuantityInput />
+      <PriceInput />
     </div>
   );
 };

@@ -2,9 +2,20 @@ import { api } from '@services/axios';
 
 import { Pagination, Order, CreateOrderPayload } from '@types';
 
+import { getCustomer } from './mocks';
+
+const addMockedCustomerToEveryOrder = (data: Order[]) => {
+  return data.map((props: Order) => {
+    return {
+      ...props,
+      customer: getCustomer(),
+    };
+  });
+};
+
 export const getOrderList = (): Promise<Pagination<Order>> => {
   return api.get('order').then((data) => ({
-    data,
+    data: addMockedCustomerToEveryOrder(data),
     metadata: {
       page: 1,
       size: 10,

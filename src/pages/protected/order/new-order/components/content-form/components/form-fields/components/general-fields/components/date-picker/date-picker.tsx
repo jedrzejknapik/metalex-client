@@ -21,13 +21,17 @@ export const DatePicker: FC = () => {
   return (
     <FormItem
       label={LL.ORDER.NEW_ORDER.FILL_THE_FORM.FIELDS.DATE.LABEL()}
-      name={CreateOrderFormFields.DATE}
+      name={CreateOrderFormFields.CREATED_AT}
       required
       hasFeedback
       validateTrigger={['onBlur', 'onChange']}
       rules={rules}
     >
-      <FormDatePicker required name={CreateOrderFormFields.DATE} />
+      <FormDatePicker
+        required
+        name={CreateOrderFormFields.CREATED_AT}
+        placeholder={LL.ORDER.NEW_ORDER.FILL_THE_FORM.FIELDS.DATE.PLACEHOLDER()}
+      />
     </FormItem>
   );
 };

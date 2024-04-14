@@ -5,24 +5,21 @@ import { useOrderForm } from '@pages/protected/order/new-order/providers';
 
 import { CreateOrderFormFields } from '@types';
 
+import { getReadableDateFormat } from '@utils/get-readable-date-format';
+
 import { Summary } from '../../summary.types';
 
 export const useGetDate = (): Summary | undefined => {
   const { LL } = useI18nContext();
   const { form } = useOrderForm();
 
-  const date = form.getFieldValue(CreateOrderFormFields.DATE);
+  const date = form.getFieldValue(CreateOrderFormFields.CREATED_AT);
 
   if (!date) {
     return;
   }
 
-  const dateFormat = new Date(date).toLocaleDateString('pl-PL', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  const dateFormat = getReadableDateFormat(date);
 
   return {
     id: uuidv4(),

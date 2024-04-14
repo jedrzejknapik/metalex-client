@@ -4,9 +4,9 @@ import { useSingleOrder } from '@providers/single-order/hooks';
 
 import Typography from '@components/typography';
 
-import styles from './price.module.scss';
+import { CURRENCY } from '@utils/app-settings';
 
-const CURRENCY = 'PLN';
+import styles from './price.module.scss';
 
 export const Price: FC = () => {
   const { price } = useSingleOrder();

@@ -123,6 +123,7 @@ type RootTranslation = {
           };
           DATE: {
             LABEL: string;
+            PLACEHOLDER: string;
             VALIDATION: {
               REQUIRED: string;
             };
@@ -131,6 +132,18 @@ type RootTranslation = {
             LABEL: string;
             VALIDATION: {
               REQUIRED: string;
+            };
+          };
+          PRICE: {
+            LABEL: () => LocalizedString;
+            VALIDATION: {
+              REQUIRED: () => LocalizedString;
+            };
+          };
+          PRODUCT_QUANTITY: {
+            LABEL: () => LocalizedString;
+            VALIDATION: {
+              REQUIRED: () => LocalizedString;
             };
           };
           POSITIONS: {
@@ -217,6 +230,12 @@ type RootTranslation = {
             LABEL: string;
           };
           DATE: {
+            LABEL: string;
+          };
+          PRICE: {
+            LABEL: string;
+          };
+          PRODUCT_QUANTITY: {
             LABEL: string;
           };
           POSITIONS: {
@@ -389,11 +408,24 @@ export type TranslationFunctions = {
           };
           DATE: {
             LABEL: () => LocalizedString;
+            PLACEHOLDER: () => LocalizedString;
             VALIDATION: {
               REQUIRED: () => LocalizedString;
             };
           };
           CUSTOMER: {
+            LABEL: () => LocalizedString;
+            VALIDATION: {
+              REQUIRED: () => LocalizedString;
+            };
+          };
+          PRICE: {
+            LABEL: () => LocalizedString;
+            VALIDATION: {
+              REQUIRED: () => LocalizedString;
+            };
+          };
+          PRODUCT_QUANTITY: {
             LABEL: () => LocalizedString;
             VALIDATION: {
               REQUIRED: () => LocalizedString;
@@ -483,6 +515,12 @@ export type TranslationFunctions = {
             LABEL: () => LocalizedString;
           };
           DATE: {
+            LABEL: () => LocalizedString;
+          };
+          PRICE: {
+            LABEL: () => LocalizedString;
+          };
+          PRODUCT_QUANTITY: {
             LABEL: () => LocalizedString;
           };
           POSITIONS: {

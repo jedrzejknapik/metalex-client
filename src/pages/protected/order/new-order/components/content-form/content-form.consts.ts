@@ -1,8 +1,11 @@
-import { CreateOrderPayload } from '@types';
+import { CreateOrderFormFields, CreateOrderPayload } from '@types';
 
-export const INITIAL_CONTENT_FORM_VALUES: CreateOrderPayload = {
+export const INITIAL_CONTENT_FORM_VALUES: Omit<
+  CreateOrderPayload,
+  CreateOrderFormFields.PRICE | CreateOrderFormFields.PRODUCTS_QUANTITY
+> = {
   customerId: '',
-  date: '',
+  createdAt: '',
   orderNr: '',
   positions: [],
 };

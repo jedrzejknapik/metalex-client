@@ -108,6 +108,7 @@ const pl: BaseTranslation = {
           },
           DATE: {
             LABEL: 'Data zamówienia',
+            PLACEHOLDER: 'Wybierz datę zamówienia',
             VALIDATION: {
               REQUIRED: 'Data zamówienia jest obowiązkowa',
             },
@@ -116,6 +117,18 @@ const pl: BaseTranslation = {
             LABEL: 'Klient',
             VALIDATION: {
               REQUIRED: 'Klient jest obowiązkowy',
+            },
+          },
+          PRICE: {
+            LABEL: 'Cena',
+            VALIDATION: {
+              REQUIRED: 'Cena jest wymagana',
+            },
+          },
+          PRODUCT_QUANTITY: {
+            LABEL: 'Ilość produktów',
+            VALIDATION: {
+              REQUIRED: 'Ilość jest wymanaga',
             },
           },
           POSITIONS: {
@@ -203,6 +216,12 @@ const pl: BaseTranslation = {
           },
           DATE: {
             LABEL: 'Data zamówienia:',
+          },
+          PRICE: {
+            LABEL: 'Cena:',
+          },
+          PRODUCT_QUANTITY: {
+            LABEL: 'Ilość produktów:',
           },
           POSITIONS: {
             LABEL: 'Pozycje w zamówieniu:',

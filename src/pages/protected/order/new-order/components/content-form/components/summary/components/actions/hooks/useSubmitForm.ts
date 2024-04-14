@@ -35,15 +35,21 @@ export const useSubmitForm = () => {
 
   const onSubmit = async () => {
     const profileId = form.getFieldValue(CreateOrderFormFields.PROFILE_ID);
-    const date = form.getFieldValue(CreateOrderFormFields.DATE);
+    const createdAt = form.getFieldValue(CreateOrderFormFields.CREATED_AT);
     const positions = form.getFieldValue(CreateOrderFormFields.POSITIONS);
     const customerId = form.getFieldValue(CreateOrderFormFields.CUSTOMER_ID);
     const orderNr = form.getFieldValue(CreateOrderFormFields.ORDER_NR);
+    const price = form.getFieldValue(CreateOrderFormFields.PRICE);
+    const productQuantity = form.getFieldValue(
+      CreateOrderFormFields.PRODUCTS_QUANTITY,
+    );
 
     const payload: CreateOrderPayload = {
       customerId,
-      date: new Date(date).toISOString(),
+      createdAt: new Date(createdAt).toISOString(),
       orderNr,
+      price,
+      productQuantity,
       positions: mapPayloadPositions(positions, profileId),
     };
 
