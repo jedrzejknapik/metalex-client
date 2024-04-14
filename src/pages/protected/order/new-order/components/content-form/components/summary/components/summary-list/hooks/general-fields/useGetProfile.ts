@@ -4,7 +4,7 @@ import { useOrderForm } from '@pages/protected/order/new-order/providers';
 
 import { CreateOrderFormFields } from '@types';
 
-import { useFindFormValue } from './../useFindFormValue';
+import { useFindFormValue } from '../useFindFormValue';
 
 import { Summary } from '../../summary.types';
 
