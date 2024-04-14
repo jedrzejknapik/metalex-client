@@ -1,9 +1,9 @@
 import { FC, PropsWithChildren } from 'react';
 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClientProvider } from '@tanstack/react-query';
 
-export const queryClient = new QueryClient();
+import { queryClient } from './query-client';
 
 export const ReactQueryProvider: FC<PropsWithChildren> = ({ children }) => {
   return (

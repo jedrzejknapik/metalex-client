@@ -5,7 +5,7 @@ import { QueryKeys } from '@api/query-keys';
 import { Pagination, Order, CreateOrderPayload } from '@types';
 
 import { createOrder, getOrderList, getSingleOrder } from './api';
-import { queryClient } from '@providers/react-query/react-query-provider';
+import { queryClient } from '@providers/react-query/query-client';
 
 export const useGetOrderList = () => {
   return useQuery<Pagination<Order>>({

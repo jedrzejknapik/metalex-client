@@ -66,7 +66,7 @@ export enum CreateOrderFormFields {
 
 export interface CreateOrderPayload {
   [CreateOrderFormFields.ORDER_NR]: Order['orderNr'];
-  [CreateOrderFormFields.CREATED_AT]: Order['createdAt'];
+  [CreateOrderFormFields.CREATED_AT]: string;
   [CreateOrderFormFields.CUSTOMER_ID]: Customer['id'];
   [CreateOrderFormFields.POSITIONS]: Position[];
   [CreateOrderFormFields.PRICE]: Order['price'];

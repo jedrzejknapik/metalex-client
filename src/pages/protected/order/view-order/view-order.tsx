@@ -5,6 +5,8 @@ import { useSingleOrder } from '@providers/single-order/hooks';
 
 import { PageContent } from '@layouts/page-content/page-content';
 
+import { getReadableDateFormat } from '@utils/get-readable-date-format';
+
 import styles from './view-order.module.scss';
 
 export const ViewOrder: FC = () => {
@@ -20,7 +22,7 @@ export const ViewOrder: FC = () => {
       >
         <div className={styles.testCard}>
           <p>Order ID: {orderNr}</p>
-          <p>Created AT: {createdAt}</p>
+          <p>Created AT: {getReadableDateFormat(createdAt)}</p>
           <p>
             Customer: {customer.firstName} {customer.lastName}
           </p>
